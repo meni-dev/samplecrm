@@ -49,7 +49,7 @@
     <div *ngIf="lst" style="background-color:lightslategrey;">this is last record</div>
   </li>
 </ul>
-<p>new table with even and o dd</p>
+<p>new table with even and odd</p>
 <ul>
   <li *ngFor="let contact of contacts;even as e; odd as o">
 
@@ -61,6 +61,19 @@
     </div>
   </li>
 </ul>
+<h3>Learning ngSwitch</h3>
+<div [ngSwitch]="superPower">
+  <div *ngSwitchcase="'wonderwomen'">Display wonderwomen superPower</div>
+  <div *ngSwitchcase="'superman'">Display superman superPower </div>
+  <div *ngSwitchcase="'spiderman'">Display spiderman superPower</div>
+  <div *ngSwitchDefault>superPower is Learning</div>
+</div>
+<div [ngSwitch]="tax">
+  <div *ngSwitchcase="10">Display tax is 10</div>
+  <div *ngSwitchcase="30">Display tax is 30 </div>
+  <div *ngSwitchcase="45">Display tax is 45</div>
+  <div *ngSwitchDefault>Display tax is 50%</div>
+</div>
 
 
 
