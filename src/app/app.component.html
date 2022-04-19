@@ -8,12 +8,6 @@
 <ng-template #error_msg>
   <p style="background-color:red"> user was not added</p>
 </ng-template>
-<p>
-  To create componant we can you following command
-  Angular Material has standard CSS.
-  The new version of UI Components which are buttons, checkboxes, and text fieldsis used to follow Angular Material
-  Design concepts.
-  It has specialized features such as cards, toolbar, speed dial, side nav, swipe, side nav, and more.</p>
 <ol>
   <li>
     ng generate componant test
@@ -75,7 +69,11 @@
   <div *ngSwitchDefault>Display tax is 50%</div>
 </div>
 
+<h4>Learning ngStyle</h4>
 
+<div [ngStyle]="{'background-color':'green','color':'#fff'}">This is green DIV</div>
+<div [ngStyle]="{'background-color':styleprop}">This is dynamic color DIV</div>
+<div [ngStyle]="{'color':txtcolor==='blue'?'blue':'green'}">This is dynamic color DIV</div>
 
 
 
