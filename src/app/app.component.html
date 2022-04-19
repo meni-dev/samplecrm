@@ -1,6 +1,15 @@
 <h1 class="c1">{{title}}</h1>
+<div *ngIf="success_msg;then updated_msg;else error_msg">
 
-<p>To create componant we can you following command
+</div>
+<ng-template #updated_msg>
+  user was updated
+</ng-template>
+<ng-template #error_msg>
+  <p style="background-color:red"> user was not added</p>
+</ng-template>
+<p>
+  To create componant we can you following command
   Angular Material has standard CSS.
   The new version of UI Components which are buttons, checkboxes, and text fieldsis used to follow Angular Material
   Design concepts.
@@ -15,9 +24,45 @@
   <li>
     modules
   </li>
-
-
 </ol>
+<h2>Learning ngFor</h2>
+<ul>
+  <li *ngFor="let contact of contacts">
+    {{contact.firstname}} {{contact.id}}
+  </li>
+</ul>
+<h2>Index value</h2>
+<ul>
+  <li *ngFor="let contact of contacts;index as i">
+    <div>
+      {{i}} {{contact.firstname}} {{contact.lastname}}
+    </div>
+  </li>
+</ul>
+<h2>First value&last value</h2>
+<ul>
+  <li *ngFor="let contact of contacts;index as i;first as fst;last as lst">
+    <div *ngIf="fst" style="background-color:lightseagreen;">this is first record</div>
+    <div>
+      {{i}} {{contact.firstname}} {{contact.lastname}}
+    </div>
+    <div *ngIf="lst" style="background-color:lightslategrey;">this is last record</div>
+  </li>
+</ul>
+<p>new table with even and o dd</p>
+<ul>
+  <li *ngFor="let contact of contacts;even as e; odd as o">
+
+    <div *ngIf="e" style="background-color:antiquewhite;">
+      {{contact.firstname}} {{contact.lastname}}
+    </div>
+    <div *ngIf="o" style="background-color:pink;">
+      {{contact.firstname}} {{contact.lastname}}
+    </div>
+  </li>
+</ul>
+
+
 
 
 
