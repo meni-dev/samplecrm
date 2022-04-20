@@ -12,7 +12,20 @@
 <div *ngFor="let contact of contacts">
   {{contact.firstname}}{{contact.lastname}}{{contact.id}}
 </div>
-
+<table style="background-color:lemonchiffon">
+  <tr>
+    <th>contactid</th>
+    <th>contactname</th>
+    <th>contactemail</th>
+  </tr>
+  <tr>
+    <td [attr.colspan]="colVal">contactname</td>
+    <td>contactemail</td>
+  </tr>
+</table>
+<button (click)="sayHello() ">Click to say Hello</button>
+<div (mouseover)="highlightBGcolor()"> Highlight me please</div>
+<input type="text" (focus)="inputBox();" />
 <table>
   <tr>
     <th>firstname</th>

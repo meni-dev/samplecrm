@@ -17,7 +17,7 @@ export class AppComponent {
 
 
   success_msg = true;
-
+  colVal = 2;
   superPower = 'superwomen';//string
   tax = 10;
   styleClsProp = 'c3';
@@ -54,5 +54,15 @@ export class AppComponent {
     'id': 3466
 
   }
-  ]
+  ];
+  sayHello() {
+    console.log("Hello from Saran Tutorials");
+  }
+  highlightBGcolor() {
+    console.log("Hi i'm being Highlight");
+  }
+  inputBox() {
+    console.log("This is input box");
+  }
+
 }
