@@ -7,13 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'simplecrm';
+  page_heading = "Learning in Angular Interpolation"; //string
+  page_count = 20; //integer
+  user_object = { 'firstname': 'meni', 'lastname': 'menaga' } //object
+  isUserLoggedIn = true;
+
+  imgurl = 'test.png';
+  imgalt = 'this is missing image text';
+
+
   success_msg = true;
 
   superPower = 'superwomen';//string
-
   tax = 10;
+  styleClsProp = 'c3';
   styleprop = "pink";
-  txtcolor = 'yellow';
+  txtcolor = 'blue';
+  conditionClassProp = 'c4';
   contacts = [{
     'firstname': 'meni',
     'lastname': "menaga",
