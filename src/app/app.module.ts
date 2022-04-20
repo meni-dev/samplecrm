@@ -9,6 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { HighlightDirective } from './highlight.directive';
 import { UsersComponent } from './users/users.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { UsersComponent } from './users/users.component';
 
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

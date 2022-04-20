@@ -15,7 +15,7 @@ export class AppComponent {
   imgurl = 'test.png';
   imgalt = 'this is missing image text';
 
-
+  username = "";
   success_msg = true;
   colVal = 2;
   superPower = 'superwomen';//string
