@@ -1,4 +1,44 @@
 <h1 class="c1">{{title}}</h1>
+
+<div>page_heading</div>
+
+<p>page_count</p>
+<a href="#">This is a link</a>
+<img [src]="imgurl" [alt]="imgalt" />
+<div *ngIf="isUserLoggedIn"></div>
+<div>
+  <div [innerHTML]="user_object.firstname"></div>
+</div>
+<div *ngFor="let contact of contacts">
+  {{contact.firstname}}{{contact.lastname}}{{contact.id}}
+</div>
+
+<table>
+  <tr>
+    <th>firstname</th>
+    <th>lastname</th>
+    <th>id</th>
+  </tr>
+  <tr *ngFor="let contact of contacts">
+    <td [title]="contact.firstname">{{contact.firstname}}</td>
+    <td [title]="contact.lastname">{{contact.firstname}}</td>
+    <td>{{contact.id}}</td>
+
+  </tr>
+</table>
+
+
+
+
+
+<!-- <h1 class="c1">{{title}}</h1>
+<div [ngClass]="'c1'"> This is ngClass</div>
+<div [ngClass]="'c1 c2'"> This is multiple ngClass</div>
+<div [ngClass]="styleClsProp"> This is ngClass variable</div>
+<div [ngClass]="styleClsProp"> This is ngClass variable</div>
+<div [ngClass]="conditionClassProp==='c4'?'c4':'c5'"> ngClassconditionalclass</div>
+<div [ngClass]="{c4:true,c5:false}"> ngClass object </div>
+
 <div *ngIf="success_msg;then updated_msg;else error_msg">
 
 </div>
@@ -74,7 +114,7 @@
 <div [ngStyle]="{'background-color':'green','color':'#fff'}">This is green DIV</div>
 <div [ngStyle]="{'background-color':styleprop}">This is dynamic color DIV</div>
 <div [ngStyle]="{'color':txtcolor==='blue'?'blue':'green'}">This is dynamic color DIV</div>
-
+ -->
 
 
 
