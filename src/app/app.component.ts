@@ -7,6 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'simplecrm';
+
+  //built-in pipes
+  username = " MENAGA";
+  lowercaseexample = 'INSTAGRAM';
+  uppercaseexample = 'learning angular framework';
+  dateExample = "Date.now()";
+  jsonExample = { username: 'saran', major: "dot.net", experiance: "7" };
+  currencyExample = 123;
+  percentageExample = 0.6954;
+
+
+
+
+
+
+
   page_heading = "Learning in Angular Interpolation"; //string
   page_count = 20; //integer
   user_object = { 'firstname': 'meni', 'lastname': 'menaga' } //object
@@ -15,7 +31,7 @@ export class AppComponent {
   imgurl = 'test.png';
   imgalt = 'this is missing image text';
 
-  username = "";
+
   success_msg = true;
   colVal = 2;
   superPower = 'superwomen';//string
