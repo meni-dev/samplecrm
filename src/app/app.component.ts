@@ -12,7 +12,7 @@ export class AppComponent {
   username = " MENAGA";
   lowercaseexample = 'INSTAGRAM';
   uppercaseexample = 'learning angular framework';
-  dateExample = "Date.now()";
+  dateExample = Date.now();
   jsonExample = { username: 'saran', major: "dot.net", experiance: "7" };
   currencyExample = 123;
   percentageExample = 0.6954;
