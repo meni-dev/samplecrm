@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -13,6 +13,9 @@ import { FormsModule } from '@angular/forms';
 import { LoansComponent } from './loans/loans.component';
 import { LoansTypesComponent } from './loans-types/loans-types.component';
 import { AddLoansComponent } from './add-loans/add-loans.component';
+
+import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@angular/common';
+import { AppRoutingModule } from './app-routing.module'
 
 
 @NgModule({
@@ -28,12 +31,13 @@ import { AddLoansComponent } from './add-loans/add-loans.component';
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatRadioModule
+    MatRadioModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

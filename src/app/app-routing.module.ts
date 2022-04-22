@@ -1,27 +1,24 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AddLoansComponent } from './add-loans/add-loans.component';
-import { LoansTypesComponent } from './loans-types/loans-types.component';
+import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router'
 import { LoansComponent } from './loans/loans.component';
+import { AddLoansComponent } from './add-loans/add-loans.component';
+
 
 const routes: Routes = [
-  {
-    path: 'loans',
-    component: LoansComponent
-  },
-  {
-    path: 'loans-types',
-    component: LoansTypesComponent
-  },
-  {
-    path: 'loans/add-loans',
-    component: AddLoansComponent
-  }
+  { path: 'loans', component: LoansComponent },
+  { path: 'add-loans', component: AddLoansComponent }
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  declarations: [],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
 })
 export class AppRoutingModule { }
