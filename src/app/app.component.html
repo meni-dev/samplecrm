@@ -1,4 +1,4 @@
-<h1 class="c1">{{title}}</h1>
+<!-- <h1 class="c1">{{title}}</h1>
 
 <div>page_heading</div>
 
@@ -7,7 +7,7 @@
 <p>{{username}}</p>
 <span style="color: red;" *ngIf="username.length ==0">Enter valid user name</span>
 
-<!-- // built-in pipes -->
+
 <h3>Built in Pipes</h3>
 
 <div>{{lowercaseexample|lowercase}}</div>
@@ -15,7 +15,7 @@
 <div>{{dateExample|date:'fullTime'}}</div>
 <div>{{ jsonExample|json}}</div>
 <div>{{ currencyExample|currency}}</div>
-<div>{{ percentageExample|percent}}</div>
+<div>{{ percentageExample|percent}}</div> -->
 
 
 <!-- <p>page_count</p>
@@ -145,5 +145,23 @@
  -->
 
 
+<header>
+  <h2>CRM Application</h2>
+</header>
+<section>
+  <nav>
+    <ul>
+      <li><a href="/loans">Loans - page</a></li>
+      <li><a href="/loans/add-loans">Add loan - page</a></li>
+      <li><a href="/loans-types">Loans type - page</a></li>
+    </ul>
+  </nav>
 
-<router-outlet></router-outlet>
+  <article>
+    <router-outlet></router-outlet>
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
