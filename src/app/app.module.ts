@@ -15,7 +15,10 @@ import { LoansTypesComponent } from './loans-types/loans-types.component';
 import { AddLoansComponent } from './add-loans/add-loans.component';
 
 import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@angular/common';
-import { AppRoutingModule } from './app-routing.module'
+import { AppRoutingModule } from './app-routing.module';
+
+import { ProductComponent } from './product/product.component';
+import { ClientsComponent } from './clients/clients.component'
 
 
 @NgModule({
@@ -27,6 +30,9 @@ import { AppRoutingModule } from './app-routing.module'
     LoansTypesComponent,
     AddLoansComponent,
 
+    ProductComponent,
+     ClientsComponent,
+
   ],
   imports: [
     FormsModule,
@@ -36,7 +42,7 @@ import { AppRoutingModule } from './app-routing.module'
     MatRadioModule,
     AppRoutingModule
   ],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
 
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,14 @@
+<p>clients works!</p>
+<a [routerLink]="' /user'">userList </a>
+<table>
+    <th>clientId</th>
+    <th>firstname</th>
+    <th>lastname</th>
+    <tr *ngFor="let client of clientlist">
+        <td>{{client.clientId}}</td>
+        <td>{{client.firstname}}</td>
+        <td>{{client.lastname}}</td>
+        <td> <a [routerLink]="['/user',client.clientId,'edit']">Edit</a> |<a
+                [routerLink]="['/user',client.clientId,'delete']">Delete</a></td>
+    </tr>
+</table>
