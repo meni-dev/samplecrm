@@ -18,7 +18,9 @@ import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from '@a
 import { AppRoutingModule } from './app-routing.module';
 
 import { ProductComponent } from './product/product.component';
-import { ClientsComponent } from './clients/clients.component'
+import { ClientsComponent } from './clients/clients.component';
+import { SearchComponent } from './search/search.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { ClientsComponent } from './clients/clients.component'
 
     ProductComponent,
      ClientsComponent,
+     SearchComponent,
+     PageNotFoundComponent,
 
   ],
   imports: [
