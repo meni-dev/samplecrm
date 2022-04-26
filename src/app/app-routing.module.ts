@@ -23,15 +23,7 @@ const routes: Routes = [
   {
     path: 'client', component: ClientsComponent
   },
-  {
-    path: '',
-    redirectTo: 'leads',
-    pathMatch: 'full'
-  },
-  {
-    path: 'leads',
-    component: LeadsGridComponent
-  },
+
   {
     path: 'search',
     component: SearchComponent
