@@ -14,11 +14,14 @@ import { AdminAccessGuard } from './admin-access.guard';
 import { AdminEditComponent } from './admin-edit/admin-edit.component';
 import { AdminDeleteComponent } from './admin-delete/admin-delete.component';
 import { AdminManageComponent } from './admin-manage/admin-manage.component';
+import { LoansTypesComponent } from './loans-types/loans-types.component';
 
 
 
 const routes: Routes = [
   { path: 'product/:id', component: ProductComponent },
+  { path: 'loans-types', component: LoansTypesComponent },
+
   { path: 'product/:productId /photos/:photoId', component: ProductComponent },
   {
     path: 'client', component: ClientsComponent

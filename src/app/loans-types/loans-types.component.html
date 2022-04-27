@@ -1,1 +1,13 @@
 <p>loans-types works!</p>
+<form [formGroup]="addLoanTypesForm">
+    <label> LoanName </label>
+    <input type="text" formControlName="LoanName">
+    <br />
+    <label>LoanType </label>
+    <input type="text" formControlName="LoanType">
+    <br />
+    <label> LoanDescription </label>
+    <textarea formControlName="LoanDescription"></textarea>
+    <br />
+    <button (click)="addLoanType()">Add LoanType</button>
+</form>

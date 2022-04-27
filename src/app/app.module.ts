@@ -9,7 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { HighlightDirective } from './highlight.directive';
 import { UsersComponent } from './users/users.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoansComponent } from './loans/loans.component';
 import { LoansTypesComponent } from './loans-types/loans-types.component';
 import { AddLoansComponent } from './add-loans/add-loans.component';
@@ -20,7 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProductComponent } from './product/product.component';
 import { ClientsComponent } from './clients/clients.component';
 import { SearchComponent } from './search/search.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserAnimationsModule,
     MatButtonModule,
     MatRadioModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
 
