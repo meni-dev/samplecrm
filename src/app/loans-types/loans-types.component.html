@@ -2,21 +2,24 @@
 <form [formGroup]="addLoanTypesForm">
     <div class="form-group">
         <label>
-            LoanName
+            LoanName:
         </label>
         <input type="text" formControlName="LoanName">
     </div>
+    <br>
     <div class="form-group">
         <label>
-            LoanType
+            LoanType:
         </label>
         <input type="text" formControlName="LoanType">
     </div>
+    <br />
     <div class="form-group">
         <label>
-            LoanDescription
+            LoanDescription:
         </label>
         <textarea formControlName="LoanDescription"></textarea>
     </div>
+    <br />
     <button (click)="addLoanType()">Add LoanType</button>
 </form>
