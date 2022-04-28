@@ -21,5 +21,5 @@
         <textarea formControlName="LoanDescription"></textarea>
     </div>
     <br />
-    <button (click)="addLoanType()">Add LoanType</button>
+    <button (click)="addLoanType()" [disabled]="!addLoanTypesForm.valid">Add LoanType</button>
 </form>

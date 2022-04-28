@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-loans-types',
@@ -25,24 +25,35 @@ export class LoansTypesComponent implements OnInit {
        'LoanDescription': new FormControl('This is for laptop')
      })*/
     this.addLoanTypesForm = this.fb.group({
-      'LoanName': new FormControl(),
-      'LoanType': new FormControl(),
-      'LoanDescription': new FormControl()
-    })
-    const newLoanObj = {
-      'LoanName': 'My Loan Application',
-      'LoanType': 'Personal Loan',
-      'LoanDescription': 'This is Loan Application'
+      'LoanName': new FormControl('', [
+        Validators.required,
+        Validators.minLength(10),
+        Validators.maxLength(20)
 
-    }
+      ]),
+      'LoanType': new FormControl('', Validators.required),
+      'LoanDescription': new FormControl('', Validators.compose([
+        Validators.required,
+        Validators.minLength(10),
+        Validators.maxLength(20)
+
+      ]))
+    })
+    /*const newLoanObj = {
+       'LoanName': 'My Loan Application',
+       'LoanType': 'Personal Loan',
+       'LoanDescription': 'This is Loan Application'
+ 
+     } */
     //another way of setting values of forms
-    this.addLoanTypesForm.setValue(newLoanObj);
+    // this.addLoanTypesForm.setValue(newLoanObj);
     //the only didderence is--> you donot have to pass all  "fields/keys"
     // this.addLoanTypesForm.patchValue(newLoanObj);
   }
   addLoanType() {
     //console.log(this.addLoanTypesForm.value)
     // console.log(this.addLoanTypesForm.get('LoanType')?.value);
+    console.log(this.addLoanTypesForm.valid);
     this.addLoanTypesForm.valueChanges.subscribe(data => {
       console.log(data);
     });
