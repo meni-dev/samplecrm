@@ -73,5 +73,22 @@ export class LoansTypesComponent implements OnInit {
       console.log(data);
     });
   }
+  resetForm() {
+    this.addLoanTypesForm.reset();
+  }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
