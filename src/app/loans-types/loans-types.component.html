@@ -5,6 +5,15 @@
             LoanName:
         </label>
         <input type="text" formControlName="LoanName">
+        <div class="text-danger"
+            *ngIf="addLoanTypesForm.get('LoanName')?.hasError('required')&&addLoanTypesForm.get('LoanName')?.touched">
+            Loan name is required</div>
+        <div class="text-danger"
+            *ngIf="addLoanTypesForm.get('LoanName')?.hasError('minlength')&&addLoanTypesForm.get('LoanName')?.touched">
+            Loan name should be minimum of 10 characters</div>
+        <div class="text-danger"
+            *ngIf="addLoanTypesForm.get('LoanName')?.hasError('maxlength')&&addLoanTypesForm.get('LoanName')?.touched">
+            Loan name should maximum have 20 characters</div>
     </div>
     <br>
     <div class="form-group">

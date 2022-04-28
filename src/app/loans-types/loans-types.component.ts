@@ -54,6 +54,21 @@ export class LoansTypesComponent implements OnInit {
     //console.log(this.addLoanTypesForm.value)
     // console.log(this.addLoanTypesForm.get('LoanType')?.value);
     console.log(this.addLoanTypesForm.valid);
+    console.log(this.addLoanTypesForm.invalid);
+    console.log(this.addLoanTypesForm.pending);
+    console.log(this.addLoanTypesForm.pristine);
+    console.log(this.addLoanTypesForm.dirty);
+    console.log(this.addLoanTypesForm.touched);
+    console.log(this.addLoanTypesForm.untouched);
+
+
+
+
+
+
+
+
+
     this.addLoanTypesForm.valueChanges.subscribe(data => {
       console.log(data);
     });
