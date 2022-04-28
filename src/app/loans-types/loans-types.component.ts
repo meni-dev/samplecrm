@@ -10,6 +10,11 @@ export class LoansTypesComponent implements OnInit {
   addLoanTypesForm!: FormGroup;
 
   constructor(private fb: FormBuilder) { }
+  trackLoanName(): void {
+    this.addLoanTypesForm.valueChanges.subscribe(data => {
+      console.log(data);
+    })
+  }
 
   ngOnInit(): void {
     // this.addLoanTypesForm = new FormGroup({
