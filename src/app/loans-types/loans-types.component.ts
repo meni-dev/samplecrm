@@ -32,7 +32,7 @@ export class LoansTypesComponent implements OnInit {
     const newLoanObj = {
       'LoanName': 'My Loan Application',
       'LoanType': 'Personal Loan',
-      // 'LoanDescription': 'This is Loan Application'
+      'LoanDescription': 'This is Loan Application'
 
     }
     //another way of setting values of forms
@@ -41,7 +41,11 @@ export class LoansTypesComponent implements OnInit {
     // this.addLoanTypesForm.patchValue(newLoanObj);
   }
   addLoanType() {
-    console.log(this.addLoanTypesForm.value)
+    //console.log(this.addLoanTypesForm.value)
+    // console.log(this.addLoanTypesForm.get('LoanType')?.value);
+    this.addLoanTypesForm.valueChanges.subscribe(data => {
+      console.log(data);
+    });
   }
 
 }
