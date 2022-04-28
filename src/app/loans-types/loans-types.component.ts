@@ -12,11 +12,14 @@ export class LoansTypesComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
   trackLoanName(): void {
     this.addLoanTypesForm.valueChanges.subscribe(data => {
+      console.log("Form Status")
       console.log(data);
     })
   }
 
   ngOnInit(): void {
+
+
     // this.addLoanTypesForm = new FormGroup({
 
     //   'LoanName': new FormControl(),
@@ -43,7 +46,15 @@ export class LoansTypesComponent implements OnInit {
         Validators.maxLength(20)
 
       ]))
+
     })
+
+    this.addLoanTypesForm.get('LoanName')?.statusChanges.subscribe(data => {
+      console.log("Form Status");
+      console.log(data);
+    })
+
+
     /*const newLoanObj = {
        'LoanName': 'My Loan Application',
        'LoanType': 'Personal Loan',
