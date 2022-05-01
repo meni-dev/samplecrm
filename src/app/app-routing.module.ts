@@ -15,12 +15,15 @@ import { AdminEditComponent } from './admin-edit/admin-edit.component';
 import { AdminDeleteComponent } from './admin-delete/admin-delete.component';
 import { AdminManageComponent } from './admin-manage/admin-manage.component';
 import { LoansTypesComponent } from './loans-types/loans-types.component';
+import { UsersComponent } from './users/users.component';
 
 
 
 const routes: Routes = [
   { path: 'product/:id', component: ProductComponent },
   { path: 'loans-types', component: LoansTypesComponent },
+  { path: 'users', component: UsersComponent },
+
 
   { path: 'product/:productId /photos/:photoId', component: ProductComponent },
   {
@@ -35,7 +38,7 @@ const routes: Routes = [
   { path: 'payments', loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule) },
   {
     path: 'admin',
-    canActivate: [SuperAdminGuard],
+    canActivate: [customElements],
     children: [
       {
         path: '',

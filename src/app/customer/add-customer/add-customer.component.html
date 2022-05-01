@@ -1,4 +1,4 @@
-<p>add-customer works!</p>
+<div *ngIf="isUserCreated" class="bg-success">User Added Successfully</div>
 <form #addCustomeForm="ngForm" (submit)="addCustomer(addCustomeForm)">
 
     <input type="text" [(ngModel)]="firstname" name="firstname" required minlength="8">
