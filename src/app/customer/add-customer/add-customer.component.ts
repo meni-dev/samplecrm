@@ -17,19 +17,20 @@ export class AddCustomerComponent implements OnInit {
 
     const postBody = {
       title: formValue.value.firstname,
-      body: formValue.value.description
+      //body: formValue.value.description
+      description: formValue.value.description
 
 
     };
-    // this.usersService.adduser(postBody).subscribe(data => {
-    //   this.isUserCreated = true;
+    this.usersService.adduser(postBody).subscribe(data => {
+      this.isUserCreated = true;
 
-    //   (err: any) => {
-    //     console.log("Unable to Add User" + err);
+      (err: any) => {
+        console.log("Unable to Add User" + err);
 
-    //   }
-    //   console.log(data)
-    // })
+      }
+      console.log(data)
+    })
     console.log(postBody);
     //this.usersService.adduser(data)
   }
