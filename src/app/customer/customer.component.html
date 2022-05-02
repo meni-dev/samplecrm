@@ -1,4 +1,13 @@
-<p>customer works!</p>
+<!-- <p>customer works!</p>
 <ul *ngFor="let user of users">
     <li>{{user.title}}</li>
-</ul>
+</ul> -->
+<ng-container *ngIf="arrays.length!='';else elseblock">
+    <div *ngFor="let arr of arrays">
+        <h2>{{arr.name}}</h2>
+    </div>
+</ng-container>
+
+<ng-template #elseblock>
+    <h2>No content</h2>
+</ng-template>

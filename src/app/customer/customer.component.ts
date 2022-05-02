@@ -16,6 +16,16 @@ export class CustomerComponent implements OnInit {
       console.log('data' + JSON.stringify(data))
       this.users = data
     });
+
+
+
   }
+
+  arrays: any = [
+    // { name: 'saran' },
+    // { name: 'meni' },
+    // { name: 'divi' },
+    // { name: 'tamil' }
+  ];
 
 }
