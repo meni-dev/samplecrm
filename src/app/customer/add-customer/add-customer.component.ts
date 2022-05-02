@@ -21,15 +21,15 @@ export class AddCustomerComponent implements OnInit {
 
 
     };
-    this.usersService.adduser(postBody).subscribe(data => {
-      this.isUserCreated = true;
+    // this.usersService.adduser(postBody).subscribe(data => {
+    //   this.isUserCreated = true;
 
-      (err: any) => {
-        console.log("Unable to Add User" + err);
+    //   (err: any) => {
+    //     console.log("Unable to Add User" + err);
 
-      }
-      console.log(data)
-    })
+    //   }
+    //   console.log(data)
+    // })
     console.log(postBody);
     //this.usersService.adduser(data)
   }

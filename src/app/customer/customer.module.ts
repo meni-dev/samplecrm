@@ -5,12 +5,14 @@ import { CustomerRoutingModule } from './customer-routing.module';
 import { CustomerComponent } from './customer.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { FormsModule } from '@angular/forms';
+import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 
 
 @NgModule({
   declarations: [
     CustomerComponent,
-    AddCustomerComponent
+    AddCustomerComponent,
+    EditCustomerComponent
   ],
   imports: [
     CommonModule,
